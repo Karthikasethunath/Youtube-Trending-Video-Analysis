@@ -1,1 +1,2 @@
 # Youtube-Trending-Video-Analysis
+Analyzing this data to get an insight into YouTube trending videos to see what is common between these videos. Those insight might also be used by people who want increase popularity of their videos in YouTube. I start with description about the dataset, answering some statistical and analytical questions. Performing EDA (exploratory data analytics) and some data preprocessing.

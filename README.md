@@ -312,36 +312,35 @@ Naive Bayes classifiers are a collection of classification algorithms based on B
 •	perform its task at a high level of accuracy.
 •	most datasets are used multiple times throughout the training process, as this helps to refine the model’s predictions and improve its success rate.
 •	E.g.:- In sentiment analysis, training data is usually composed of sentences, reviews or tweets as the input, with the label indicating whether that piece of text is positive or negative.
-•	forming at least 70-80% of the total data that is use to build the model. 
-In my dataset, YouTube analysis training data – 70% , data with numerical, Boolean and categorical data.
-#### Validation data : is primarily used to determine whether the model can correctly identify new data or if it’s overfitting to the original dataset. It helps to adjust hyperparameters and improve model’s accuracy.
-In future this model can be validated with 20% of validation dataset.
-#### Testing data : is used after both training and validation. It aims to test the accuracy of the final model against the targets. It also provides further confirmation that the model isn’t overfitting to  training and validation data.
-In the dataset 30% id for testing, testing is evaluation using precision, recall and accuracy.
+•	forming at least 70-80% of the total data that is use to build the model.  
+*In my dataset, YouTube analysis training data – 70% , data with numerical, Boolean and categorical data.*
+#### Validation data : is primarily used to determine whether the model can correctly identify new data or if it’s overfitting to the original dataset. It helps to adjust hyperparameters and improve model’s accuracy.  
+*In future this model can be validated with 20% of validation dataset.*
+#### Testing data : is used after both training and validation. It aims to test the accuracy of the final model against the targets. It also provides further confirmation that the model isn’t overfitting to  training and validation data.  
+*In the dataset 30% id for testing, testing is evaluation using precision, recall and accuracy.*
 #### How much training data needed? : not so much is needed The reason for this is that the number of data points you’ll need for your project is affected by a wide range of factors. there are some factors that often have a high degree of influence on the size of the dataset such as :-
-•	Complexity of model -- for every parameter that the model needs to account for, it will need more training data.
-In my dataset when number of parameters increases then data size should also increase. As my data set mostly related to comparison between attributes, large dataset can increase accuracy.
+•	Complexity of model -- for every parameter that the model needs to account for, it will need more training data.  
+*In my dataset when number of parameters increases then data size should also increase. As my data set mostly related to comparison between attributes, large dataset can increase accuracy.*
 •	Training method -- Many traditional machine learning algorithms use structured learning, which has a fairly low ceiling for additional 
 data and more datasets are not needed. In contrast, models that use unsupervised learning can improve without structure and figure
-out their own parameters. This method requires a lot  more data.
-In my dataset I have used both structural and unsupervised learning. Therefor large number of data will be suitable.
-•	Labelling needs -- we can annotate a data point in a variety of ways.  As a result, how you label a data point can create significant              variation in the number of data points we need.
-in my dataset, in the description column I have used sentiment 
-analysis that label each sentences as positive, negative or neutral.
-•	Tolerance for error -- Think of the difference between a model that predicts the weather and one that identifies patients who are at          imminent risk of heart attacks. One of these has a much lower threshold for error than the other. The lower your acceptable level of risk, the more data you’ll need to ensure that risk is mitigated.
-Even though the data set is large, the threshold for error is lower.
+out their own parameters. This method requires a lot  more data.  
+*In my dataset I have used both structural and unsupervised learning. Therefor large number of data will be suitable.*
+•	Labelling needs -- we can annotate a data point in a variety of ways.  As a result, how you label a data point can create significant variation in the number of data points we need.  
+*In my dataset, in the description column I have used sentiment analysis that label each sentences as positive, negative or neutral.*
+•	Tolerance for error -- Think of the difference between a model that predicts the weather and one that identifies patients who are at imminent risk of heart attacks. One of these has a much lower threshold for error than the other. The lower your acceptable level of risk, the more data you’ll need to ensure that risk is mitigated.  
+*Even though the data set is large, the threshold for error is lower*.
 •	Diversity of input -- A chatbot, for example, has to be able to 
 understand a variety of languages written in formal, informal, or 
 even grammatically incorrect styles. It has to be able to 
 understand all of them in order to provide a high level of customer service. Then we will need more data to help the model function in 
-that unpredictable environment.
-In my data set, in the ‘title’,’channel_name’,’thumpnail_link’ and 
+that unpredictable environment.  
+*In my data set, in the ‘title’,’channel_name’,’thumpnail_link’ and 
 ‘description’ column a variety of languages and styles are used. 
-Therefor more data set is needed in order to understand them
+Therefor more data set is needed in order to understand them.*
 #### Common method for calculating data needs :
 •	Rule of10 -- This is a common, if controversial, rule of thumb which states that a model requires ten times more data than it has degrees of freedom. 
-The aim of this rule is to compensate for some of the variability that all of your parameters bring to the model’s input.
-If the number of records in our data is greater than (Number of columns – 1) * 10 then the data would be sufficient enough to conduct study. Here In my dataset there are 16 attributes and 40950 records => (16 – 1) *10 = 150 . The number of records is greater than this threshold. Therefore, we have sufficient amount of data.
+The aim of this rule is to compensate for some of the variability that all of your parameters bring to the model’s input.  
+*If the number of records in our data is greater than (Number of columns – 1) * 10 then the data would be sufficient enough to conduct study. Here In my dataset there are 16 attributes and 40950 records => (16 – 1) *10 = 150 . The number of records is greater than this threshold. Therefore, we have sufficient amount of data.*
 
 •	Learning curves – for more evidence-based decision. by plotting results on a graph after each iteration, you can start to see a relationship between dataset size and your model’s ability. This will help you to identify the point where more data starts to provide diminishing returns. 
 #### Quality :high quality dataset has following features :-
@@ -349,23 +348,23 @@ If the number of records in our data is greater than (Number of columns – 1) *
 •	Consistency – ensure classes are distributed
 •	Comprehensiveness – check that we have enough data
 •	Relevancy – identify relevant parameters
-•	Diversity – perform user analysis to uncover hidden biases.
-There are no irregularities in my data, it is distributed. Important parameters are ‘views’ and ‘likes’.
+•	Diversity – perform user analysis to uncover hidden biases.  
+*There are no irregularities in my data, it is distributed. Important parameters are ‘views’ and ‘likes’.*
 #### Data collection : the data that we gather must be suitable for the task at hand.
 •	Coverage planning 
 •	Check for structured and unstructured data
 •	Feature extraction
-•	Mitigate bias 
-There is no noise in my data set. The redundant attribute was first removed by using python.
+•	Mitigate bias   
+*There is no noise in my data set. The redundant attribute was first removed by using python.*
 #### Data cleansing : A clean dataset will have clear, precise parameters and consistent processes for managing outliers and missing values. In other words, it ensures that your data is accurate, complete, and relevant. Some data cleansing problems are:-
-•	Duplication
-There is no duplication in my data set.
-•	Outliers
-There are many outliers in my dataset.
-•	Structural errors
-No structural errors in my dataset.
-•	Missing values
-There are no missing values in my dataset.
+•	Duplication  
+*There is no duplication in my data set.*
+•	Outliers  
+*There are many outliers in my dataset.*
+•	Structural errors  
+*No structural errors in my dataset.*
+•	Missing values  
+*There are no missing values in my dataset.*
 
 
 
